@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  nicki-pipelines-tests:
+    build: .
+    volumes:
+     - ./pipelines:/usr/share/logstash/pipeline
+     - ./pipeline.yml:/usr/share/logstash/config/pipelines.yml
+     - ./../../logs:/logs:ro
